@@ -10,10 +10,10 @@ const app = express();
 app.use(cors());
   
 // Handle OPTIONS method for preflight request
-app.options('*', (req, res) => {
-  res.sendStatus(200); // Respond with HTTP OK status
-});
-
+// app.options('*', (req, res) => {
+//   res.sendStatus(200); // Respond with HTTP OK status
+// });
+app.options('*', cors()); // Allow OPTIONS on all route
 // app config
 
 // middleware
