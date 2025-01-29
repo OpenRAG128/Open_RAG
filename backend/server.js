@@ -7,9 +7,9 @@ import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 
 const app = express();
 // Enable CORS
-app.use(cors({ origin: "https://fascinating-hotteok-1174a9.netlify.app" }));
+app.use(cors());
 
-// app.options('*', cors()); // Allow OPTIONS on all route
+app.options('*', cors()); // Allow OPTIONS on all route
 
 // middleware
 app.use(express.json());
@@ -22,7 +22,7 @@ connectDB();
 // const Time = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true }); // 12-hour format
 // const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }) // Day name
 // const Timing = DMY + Time + Day;
-const Date = new Date();
+const date = new Date();
 // routes
 app.post("/create", async (req, res) => {
   // , number, reached, description
@@ -32,7 +32,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    Date: Date
+    date: date
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
