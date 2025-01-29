@@ -24,6 +24,7 @@ const Time = {
   day: new Date().toLocaleDateString("en-US", { weekday: "long" }) // Day name
 };
 
+const Date = new Date();
 
 // routes
 app.post("/create", async (req, res) => {
@@ -34,7 +35,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    Time:Time
+    Date:Date
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
