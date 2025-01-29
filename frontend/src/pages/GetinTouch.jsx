@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify'; 
 
 const GetinTouch = () => {
-  const backendBaseUrl = 'https://open-rag.onrender.com';
+  const backendBaseUrl = 'https://open-rag.onrender.com/';
   // const backendBaseUrl = 'http://localhost:8081';
   const containerRef = useRef(null);
   const [name,setName] = useState('');
