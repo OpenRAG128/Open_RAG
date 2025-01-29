@@ -37,6 +37,7 @@ app.post("/create", async (req, res) => {
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
   res.json({ msg: "got it", data: createdUser });
+  res.setHeader("Access-Control-Allow-Origin", "*");
 });
 
 app.get("/", (req, res) => {
