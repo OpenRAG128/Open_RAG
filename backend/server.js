@@ -18,13 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 // db connection
 connectDB();
 
-const Time = {
-  date: new Date().toISOString().split("T")[0], // YYYY-MM-DD format
-  time: new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true }), // 12-hour format
-  day: new Date().toLocaleDateString("en-US", { weekday: "long" }) // Day name
-};
-
-const Date = new Date();
+const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+const Time = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true }); // 12-hour format
+const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }) // Day name
+const Timing = DMY + Time + Day;
 
 // routes
 app.post("/create", async (req, res) => {
@@ -35,7 +32,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    Date:Date
+    timing:Timing
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
