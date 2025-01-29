@@ -9,7 +9,7 @@ const app = express();
 // Enable CORS
 app.use(cors());
 
-app.options('*', cors()); // Allow OPTIONS on all route
+app.options('*', cors({ origin: "https://fascinating-hotteok-1174a9.netlify.app" })); // Allow OPTIONS on all route
 
 // middleware
 app.use(express.json());
