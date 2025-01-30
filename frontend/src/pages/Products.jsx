@@ -29,12 +29,19 @@ const Products = () => {
           <div className="leftContent w-full md:w-96 h-full  flex-1">
             {/* md and its above screen view */}
             <h1 className="hidden md:block text-white font-bold text-2xl font-sans">
-            Langvault: 
+              Langvault:
             </h1>
             <p className="hidden md:block text-white text-lg pt-5 ">
               <ul className=" list-disc text-gray-300 px-6">
                 <li className="font-sans">
-                Transform your PDFs and resumes effortlessly between national and international languages with just two clicks! OpenRAG's LangVault ensures your documents are instantly accessible in your preferred local language, breaking language barriers in seconds. Whether you're preparing for a global opportunity or simplifying communication, LangVault's lightning-fast, accurate translations make your documents ready to read, share, and impress—anywhere, anytime.
+                  Transform your PDFs and resumes effortlessly between national
+                  and international languages with just two clicks! OpenRAG's
+                  LangVault ensures your documents are instantly accessible in
+                  your preferred local language, breaking language barriers in
+                  seconds. Whether you're preparing for a global opportunity or
+                  simplifying communication, LangVault's lightning-fast,
+                  accurate translations make your documents ready to read,
+                  share, and impress—anywhere, anytime.
                 </li>
               </ul>
             </p>
@@ -86,7 +93,12 @@ const Products = () => {
             <p className="hidden md:block text-white text-lg pt-5 ">
               <ul className=" list-disc text-gray-300 px-6">
                 <li className="font-sans">
-                OpenRAG offers tailored AI applications and DOCDYNAMO is one of it which offers you time and space where you can just upload your multiple PDFs(Upto 5) for free and ask the questions to our chatbot and it will respond you as early as possible. Also, get a personalised youtube recommendations according to the query you asked.
+                  OpenRAG offers tailored AI applications and DOCDYNAMO is one
+                  of it which offers you time and space where you can just
+                  upload your multiple PDFs(Upto 5) for free and ask the
+                  questions to our chatbot and it will respond you as early as
+                  possible. Also, get a personalised youtube recommendations
+                  according to the query you asked.
                 </li>
               </ul>
             </p>
@@ -98,10 +110,12 @@ const Products = () => {
               <h1 className="text-xl font-bold">DocDynamo</h1>
               <ul className="">
                 <li>
-                  LLM playground is a simulation of all the AI models currently
-                  trending in the world . where you can compare two AI models by
-                  giving them coding questions or any expert question and let
-                  the LLM show how capable it is.
+                  OpenRAG offers tailored AI applications and DOCDYNAMO is one
+                  of it which offers you time and space where you can just
+                  upload your multiple PDFs(Upto 5) for free and ask the
+                  questions to our chatbot and it will respond you as early as
+                  possible. Also, get a personalised youtube recommendations
+                  according to the query you asked.
                 </li>
               </ul>
               <Link
