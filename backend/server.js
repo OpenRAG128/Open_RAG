@@ -3,8 +3,6 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import userModel from "./models/userModel.js";
 import "dotenv/config";
-import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
-import { Resend } from "resend";
 import nodemailer from "nodemailer";
 
 const app = express();
@@ -19,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // db connection
 connectDB();
-const resend = new Resend("re_KS4MAwzv_BnZtefRM5qyVfEmLFRzw57F8");
+
 const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 const Time = new Date().toLocaleTimeString("en-US", {
   hour: "2-digit",
