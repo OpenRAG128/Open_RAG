@@ -85,7 +85,7 @@ const Products = () => {
               DocDynamo
             </Link>
           </div>
-          <div className="rightContent w-full md:w-96  h-full  flex-1 md:pt-52 pt-0">
+          <div className="rightContent w-full md:w-96  h-full  flex-1 md:pt-56 pt-0">
             {/* md and above screen view */}
             <h1 className="hidden md:block text-white font-bold text-2xl font-sans">
               DocDynamo
@@ -104,7 +104,7 @@ const Products = () => {
             </p>
             {/* sm screen view */}
             <SpotlightCard
-              className="md:hidden w-[90vw] h-96 flex flex-col gap-5 cursor-pointer rounded-md"
+              className="md:hidden w-[90vw] h-max flex flex-col gap-5 cursor-pointer rounded-md"
               spotlightColor="rgba(255, 255, 255, 0.25)"
             >
               <h1 className="text-xl font-bold">DocDynamo</h1>
