@@ -44,31 +44,21 @@ app.post("/create", async (req, res) => {
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
   res.json({ msg: "got it", data: createdUser });
-  // Send email to the user
-  // await resend.emails.send({
-  //   from: 'patelharsh90541@gmail.com',
-  //   to: email,
-  //   subject: 'no-reply',
-  //   html: `
-  //     <p>Thank you for reaching out to OpenRAG! We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
-  //     Our team will review your query and get back to you as soon as possible. In the meantime, feel free to explore our website for more information about our services on our official website.
-  //     If you have any urgent concerns, don’t hesitate to contact our founder at <strong style="color: #34d399;">nisarg.nargund@gmail.com</strong>!</p>
-  //   `
-  // });
-  
+
+  //Mail Service added
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
-    secure:true,
+    secure: true,
     port: 465,
     auth: {
-      user: "patelharsh90541@gmail.com",
-      pass: "boqzxgfgvnarxbjj",
+      user: "nisarg.nargund@gmail.com",
+      pass: "yotskzqtahgbtntn",
     },
   });
 
   const mailOptions = {
-    from: "patelharsh90541@gmail.com",
+    from: "nisarg.nargund@gmail.com",
     to: email,
     subject: "no-reply",
     html: `
@@ -82,7 +72,7 @@ app.post("/create", async (req, res) => {
         style="width:100%;border:none;border-top:1px solid #eaeaea;border-color:#cccccc;margin:20px 0"
           />
     <strong >nisarg.nargund@gmail.com</strong>!
-  `
+  `,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -95,8 +85,9 @@ app.post("/create", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hey , This is backend");
 });
+
 const PORT = 8081;
 // starting the server
 app.listen(PORT, () => {
