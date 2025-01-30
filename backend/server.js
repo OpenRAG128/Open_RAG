@@ -32,7 +32,7 @@ minute = minute < 10 ? '0' + minute : minute;
 const HrMin = `${hour}:${minute} ${period}`;
 
 
-const DMY = now.getDate(); // YYYY-MM-DD format
+const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
 
@@ -46,7 +46,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    timing: DMY,
+    timing: timing,
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
