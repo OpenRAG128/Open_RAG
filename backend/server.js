@@ -19,11 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const Time = new Date().toLocaleTimeString("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  hour12: true,
-}); // 12-hour format
+const Time = new Date().toLocaleTimeString(); // 12-hour format
 const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 const timing = `${DMY} ${Time} ${Day}`; // Concatenate with spaces for clarity
 const date = new Date();
