@@ -20,6 +20,7 @@
     "mailersend": "^2.3.0",
     "mongoose": "^8.9.5",
     "nodemailer": "^6.10.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "resend": "^4.1.1"
   }
 }
