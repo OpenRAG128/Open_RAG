@@ -47,7 +47,7 @@ const GetinTouch = () => {
     }
     // Send form data to your server here
     axios.defaults.withCredentials = false;
-    axios.post(`${backendBaseUrl}create`, values)
+    axios.post(`${backendBaseUrl}/create`, values)
      .then((response) => {
         
         setName('');
