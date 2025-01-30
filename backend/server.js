@@ -46,7 +46,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    timing: timing,
+    timing: DMY,
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
