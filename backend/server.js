@@ -72,8 +72,8 @@ app.post("/create", async (req, res) => {
     to: email,
     subject: "no-reply",
     html: `
-    <h3 style="color:#3d91ff">Greetings user,</h3></br>
-    <p style="font-size: 16px;">Thank you !😊</p></br>
+    <h3 >Greetings user,</h3></br>
+    <p style="font-size: 16px;">Thank you !😊</p><pre> </pre>
     <p>for reaching out to <strong style="#3dff81">OpenRAG!🤖</strong> We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
     Our team will review your query and get back to you as soon as possible. In the meantime, feel free to explore our website for more information about our services on our official website.
     If you have any urgent concerns, don’t hesitate to contact our founder at 
