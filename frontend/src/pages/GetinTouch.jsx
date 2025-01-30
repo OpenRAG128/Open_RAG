@@ -8,7 +8,7 @@ import { Bounce } from 'react-toastify';
 const GetinTouch = () => {
   
   // const backendBaseUrl = 'https://open-rag-mu.vercel.app/';
-  const backendBaseUrl = 'https://open-rag.onrender.com/';
+  const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
   // const backendBaseUrl = 'http://localhost:8081';
   const containerRef = useRef(null);
   const [name,setName] = useState('');
