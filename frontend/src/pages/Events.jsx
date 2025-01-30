@@ -46,7 +46,7 @@ const Events = () => {
         {/* 1 */}
         <div
         
-          className={`cursor-pointer w-full h-[68px] md:h-12 ease-linear  flex flex-col items-center gap-2 relative  overflow-${
+          className={`cursor-pointer w-full h-[7rem] md:h-24 ease-linear  flex flex-col items-center gap-2 relative  overflow-${
             selectedId === 1 ? "auto" : "hidden"
           } px-4`}
         >
@@ -71,7 +71,7 @@ const Events = () => {
           <div
             ref={ref}
             style={{
-              top: selectedId === 1 ? "80px" : "0px",
+              top: selectedId === 1 ? "100px" : "0px",
               opacity: selectedId === 1 ? "100" : "0",
             }}
             className=" w-full absolute transition-all duration-700  ease-linear  text-white "
