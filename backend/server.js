@@ -72,7 +72,8 @@ app.post("/create", async (req, res) => {
     to: email,
     subject: "no-reply",
     html: `
-    <p>Thank you for reaching out to OpenRAG! We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
+    <h1>Greetings user,</h1></br>
+    <p style="font-size: 20px;">Thank you !😊</br>for reaching out to OpenRAG!🤖 We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
     Our team will review your query and get back to you as soon as possible. In the meantime, feel free to explore our website for more information about our services on our official website.
     If you have any urgent concerns, don’t hesitate to contact our founder at <strong style="color: #34d399;">nisarg.nargund@gmail.com</strong>!</p>
   `
