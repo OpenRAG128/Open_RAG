@@ -17,10 +17,10 @@ const Navbar = ({toggleMenu}) => {
             {/* Logo and brand */}
             <div className="flex items-center">
               {/* <Brain className="h-8 w-8 text-white" /> */}
-              <div className="flex gap-2 items-center cursor-pointer">
+              <Link to='/' className="flex gap-2 items-center cursor-pointer">
                 <Logo/>
                 <p className="h-max w-max text-white font-bold text-lg">OpenRAG</p>
-              </div>
+              </Link>
             </div>
 
             {/* Desktop navigation */}
