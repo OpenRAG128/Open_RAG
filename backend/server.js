@@ -69,9 +69,13 @@ app.post("/create", async (req, res) => {
 
   const mailOptions = {
     from: "patelharsh90541@gmail.com",
-    to: "patelharsh749005@gmail.com",
-    subject: "Sending Email using Node.js",
-    text: "That was easy!",
+    to: email,
+    subject: "no-reply",
+    html: `
+    <p>Thank you for reaching out to OpenRAG! We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
+    Our team will review your query and get back to you as soon as possible. In the meantime, feel free to explore our website for more information about our services on our official website.
+    If you have any urgent concerns, don’t hesitate to contact our founder at <strong style="color: #34d399;">nisarg.nargund@gmail.com</strong>!</p>
+  `
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
