@@ -42,7 +42,7 @@ app.post("/create", async (req, res) => {
   // Send email to the user
   resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: 'patelharsh749005@gmail.com',
+    to: 'patelharsh90541@gmail.com',
     subject: 'no-reply',
     html: `
       <p>Thank you for reaching out to OpenRAG! We’re excited to have you here and are committed to providing you with the best AI-powered solutions for all your queries.
