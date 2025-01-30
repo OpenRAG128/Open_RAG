@@ -6,6 +6,7 @@ import "dotenv/config";
 import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 import { Resend } from "resend";
 import nodemailer from "nodemailer";
+
 const app = express();
 // Enable CORS
 app.use(cors());
@@ -56,7 +57,7 @@ app.post("/create", async (req, res) => {
   // });
   
 
-  var transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     secure:true,
     port: 465,
@@ -66,9 +67,9 @@ app.post("/create", async (req, res) => {
     },
   });
 
-  var mailOptions = {
+  const mailOptions = {
     from: "patelharsh90541@gmail.com",
-    to: "patelharsh749005.com",
+    to: "patelharsh749005@gmail.com",
     subject: "Sending Email using Node.js",
     text: "That was easy!",
   };
