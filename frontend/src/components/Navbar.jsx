@@ -11,7 +11,7 @@ const Navbar = ({toggleMenu}) => {
   return (
     <>
     {/*  bg-white/5 backdrop-blur-md border-b border-white/10*/}
-      <nav className="sm:m-3 md:m-5 fixed w-[100vw] bg-white/5 backdrop-blur-md border-b border-white/10 z-50">
+      <nav className="lg:m-5 lg:fixed lg:w-[100vw] bg-white/5 backdrop-blur-md border-b border-white/10 z-50">
         <div className="w-[90%] mx-auto  sm:px-4 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:px-1 ">
             {/* Logo and brand */}
