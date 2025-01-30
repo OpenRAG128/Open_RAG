@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // db connection
 connectDB();
-
+const event = new Date('August 19, 1975 23:15:30 GMT+00:00');
 const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const Time = new Date().toLocaleTimeString(); // 12-hour format
+const Time = event.toLocaleTimeString('en-US'); // 12-hour format
 const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 const timing = `${DMY} ${Time} ${Day}`; // Concatenate with spaces for clarity
 const date = new Date();
