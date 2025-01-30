@@ -5,7 +5,7 @@ import userModel from "./models/userModel.js";
 import "dotenv/config";
 import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 import { Resend } from "resend";
-
+import nodemailer from "nodemailer";
 const app = express();
 // Enable CORS
 app.use(cors());
@@ -54,7 +54,7 @@ app.post("/create", async (req, res) => {
   //     If you have any urgent concerns, don’t hesitate to contact our founder at <strong style="color: #34d399;">nisarg.nargund@gmail.com</strong>!</p>
   //   `
   // });
-  var nodemailer = require("nodemailer");
+  
 
   var transporter = nodemailer.createTransport({
     service: "gmail",
