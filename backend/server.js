@@ -17,19 +17,15 @@ app.use(express.urlencoded({ extended: true }));
 
 // db connection
 connectDB();
-
 const now = new Date();
 let hour = now.getHours();
 let minute = now.getMinutes();
 
-// Convert to 12-hour format
-hour = hour % 12 || 12;
-let period = hour >= 12 ? 'PM' : 'AM';
-
 // Format minute to be two digits
 minute = minute < 10 ? '0' + minute : minute;
+hour = hour < 10 ? '0' + hour : hour; 
 
-const HrMin = `${hour}:${minute} ${period}`;
+const HrMin = `${hour}:${minute}`;
 const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
