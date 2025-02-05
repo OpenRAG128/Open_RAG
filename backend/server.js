@@ -19,21 +19,22 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 const now = new Date();
-let hour = now.getHours();
-let minute = now.getMinutes();
 
-// Convert to 12-hour format
+// Convert to IST (Indian Standard Time)
+const options = { timeZone: "Asia/Kolkata", hour12: true, hour: "2-digit", minute: "2-digit" };
+const HrMin = now.toLocaleTimeString("en-US", options); // e.g., "02:30 PM"
 
-let period = hour >= 12 ? 'PM' : 'AM';
+// Get date in YYYY-MM-DD format
+const DMY = now.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }); // "YYYY-MM-DD"
 
-// Format minute to be two digits
-minute = minute < 10 ? '0' + minute : minute;
+// Get day name
+const Day = now.toLocaleDateString("en-US", { timeZone: "Asia/Kolkata", weekday: "long" });
 
-const HrMin = `${hour}:${minute} ${period}`;
-const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
-const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
-//  Shows the converted time in IST
+// Final formatted timing
+const timing = `${DMY} ${HrMin} ${Day}`;
+
+console.log(timing); // Example Output: "2024-02-05 02:30 PM Monday"
+
 
 // // routes
 app.post("/create", async (req, res) => {
