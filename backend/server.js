@@ -17,20 +17,27 @@ app.use(express.urlencoded({ extended: true }));
 
 // db connection
 connectDB();
-const now = new Date();
-let hour = now.getHours();
-let minute = now.getMinutes();
 
-// Format minute to be two digits
-minute = minute < 10 ? '0' + minute : minute;
-hour = hour < 10 ? '0' + hour : hour; 
+// const now = new Date();
+// let hour = now.getHours();
+// let minute = now.getMinutes();
 
-const HrMin = `${hour}:${minute}`;
-const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
-const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
+// // Convert to 12-hour format
 
-// routes
+// let period = hour >= 12 ? 'PM' : 'AM';
+
+// // Format minute to be two digits
+// minute = minute < 10 ? '0' + minute : minute;
+
+// const HrMin = `${hour}:${minute} ${period}`;
+// const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+// const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
+// const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
+const utcDate = new Date(createdUser.timing);
+const localDate = utcDate.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+console.log(localDate); // Shows the converted time in IST
+
+// // routes
 app.post("/create", async (req, res) => {
   // , number, reached, description
   const { name, email, selectedOption, description } = req.body;
@@ -39,7 +46,7 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    timing: timing,
+    timing: localDate,
   };
   const createdUser = await userModel.create(newUser);
   console.log(createdUser);
