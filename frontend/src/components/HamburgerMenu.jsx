@@ -46,15 +46,7 @@ const HamburgerMenu = ({closeMenu}) => {
                 Events
               </Link>
             </li>
-            <li  className='hamburgerMenuLi rounded  w-full  p-2 text-center hover:bg-gray-800  cursor-pointer'>
-              <Link
-                onClick={closeMenu}
-                to="/blogs"
-                 className="hamburgerMenua cursor-pointer text-gray-300 hover:text-white"
-              >
-                Blogs
-              </Link>
-            </li>
+          
             <li  className='hamburgerMenuLi rounded  w-full  p-2 text-center hover:bg-gray-800  cursor-pointer'>
               <Link
                 onClick={closeMenu}
