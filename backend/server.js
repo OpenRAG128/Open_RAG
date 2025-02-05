@@ -33,9 +33,7 @@ connectDB();
 // const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 // const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 // const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
-const utcDate = new Date(createdUser.timing);
-const localDate = utcDate.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
-console.log(localDate); // Shows the converted time in IST
+ // Shows the converted time in IST
 
 // // routes
 app.post("/create", async (req, res) => {
@@ -49,6 +47,9 @@ app.post("/create", async (req, res) => {
     timing: localDate,
   };
   const createdUser = await userModel.create(newUser);
+  const utcDate = new Date(newUser.timing);
+const localDate = utcDate.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+console.log(localDate);
   console.log(createdUser);
   res.json({ msg: "got it", data: createdUser });
 
