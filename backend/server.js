@@ -18,22 +18,22 @@ app.use(express.urlencoded({ extended: true }));
 // db connection
 connectDB();
 
-// const now = new Date();
-// let hour = now.getHours();
-// let minute = now.getMinutes();
+const now = new Date();
+let hour = now.getHours();
+let minute = now.getMinutes();
 
-// // Convert to 12-hour format
+// Convert to 12-hour format
 
-// let period = hour >= 12 ? 'PM' : 'AM';
+let period = hour >= 12 ? 'PM' : 'AM';
 
-// // Format minute to be two digits
-// minute = minute < 10 ? '0' + minute : minute;
+// Format minute to be two digits
+minute = minute < 10 ? '0' + minute : minute;
 
-// const HrMin = `${hour}:${minute} ${period}`;
-// const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-// const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
-// const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
- // Shows the converted time in IST
+const HrMin = `${hour}:${minute} ${period}`;
+const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
+const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
+//  Shows the converted time in IST
 
 // // routes
 app.post("/create", async (req, res) => {
@@ -44,13 +44,10 @@ app.post("/create", async (req, res) => {
     email: email,
     reached: selectedOption,
     description: description,
-    timing: localDate,
+    timing: timing,
   };
   const createdUser = await userModel.create(newUser);
-  const utcDate = new Date(newUser.timing);
-const localDate = utcDate.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
-console.log(localDate);
-  console.log(createdUser);
+
   res.json({ msg: "got it", data: createdUser });
 
   //Mail Service added
