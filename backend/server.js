@@ -23,6 +23,7 @@ let hour = now.getHours();
 let minute = now.getMinutes();
 
 // Convert to 12-hour format
+hour = hour % 12 || 12;
 let period = hour >= 12 ? 'PM' : 'AM';
 
 // Format minute to be two digits
