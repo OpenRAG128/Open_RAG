@@ -5,6 +5,7 @@ import SpotlightCard from "../components/reactBits/SpotlightCard";
 import { Link } from "react-router-dom";
 import founder from "../assets/images/image1.png";
 import cofounder from "../assets/images/image2.jpg";
+import advisor from "../assets/images/advisor.jpg";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -59,28 +60,40 @@ const About = () => {
                 democratize AI and make it accessible worldwide.{" "}
               </p>
             </p>
-            <div className="hidden md:items-center  md:flex">
-              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className=" w-60 h-80 border-4 border-white rounded-xl">
+            <div className="md:pt-5 hidden md:items-center  md:flex ">
+            <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
+                <div className="md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
-                    src={cofounder}
+                    src={advisor}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
                 </div>
-                <h1 className="text-sm font-sans">CO-FOUNDER : <span className="text-emerald-300 font-bold">Mitul Goswami</span></h1>
+                <h1 className="md:text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">ADVISOR : <br/><span className="text-emerald-300 font-bold"> Suresh Chandra Satpathy</span></h1>
               </div>
-
-              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className=" w-60 h-80 border-4 border-white rounded-xl">
+            
+            <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
+                <div className="md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
                     src={founder}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
                 </div>
-                <h1 className="text-sm font-sans">FOUNDER : <span className="text-emerald-300 font-bold"> Nisharg Nargund</span></h1>
+                <h1 className="md:text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">FOUNDER : <br/><span className="text-emerald-300 font-bold"> Nisharg Nargund</span></h1>
               </div>
+              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
+                <div className="md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
+                  <img
+                    src={cofounder}
+                    alt=""
+                    className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
+                  />
+                </div>
+                <h1 className="md:text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">CO-FOUNDER : <br/><span className="text-emerald-300 font-bold">Mitul Goswami</span></h1>
+              </div>
+
+              
             </div>
           </SpotlightCard>
           <SpotlightCard
