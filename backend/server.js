@@ -24,18 +24,14 @@ let minute = now.getMinutes();
 
 // Convert to 12-hour format
 let period = hour >= 12 ? 'PM' : 'AM';
-hour = hour % 12 || 12; // Convert 0 to 12 for 12-hour format
 
 // Format minute to be two digits
 minute = minute < 10 ? '0' + minute : minute;
 
 const HrMin = `${hour}:${minute} ${period}`;
-
-
 const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
 const timing = `${DMY} ${HrMin} ${Day}`; // Concatenate with spaces for clarity
-
 
 // routes
 app.post("/create", async (req, res) => {
