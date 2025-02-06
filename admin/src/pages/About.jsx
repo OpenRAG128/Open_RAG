@@ -4,8 +4,7 @@ import "../styles/style.css";
 import axios from "axios";
 import VariableProximity from "../components/reactBits/VariableProximity";
 import { useEffect } from "react";
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 const About = () => {
   const containerRef = useRef(null);
