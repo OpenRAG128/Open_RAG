@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     email:{type:String, required:true},
     reached:{type:String, required:true},
     description:{type:String, required:true},
-    timing:{type:String, required:true},
+    timing:{type:String},
 });
 
 const userModel = mongoose.models.user || mongoose.model("User", userSchema)

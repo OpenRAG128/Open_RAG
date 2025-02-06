@@ -45,18 +45,22 @@ const Products = () => {
                 </li>
               </ul>
             </p>
-            {/* sm screen view */}
+            {/* sm screen view (mobile view)*/}
             <SpotlightCard
-              className="md:hidden w-[90vw] h-96 flex flex-col gap-5 cursor-pointer rounded-md"
+              className="md:hidden w-[90vw] h-max flex flex-col gap-5 cursor-pointer rounded-md"
               spotlightColor="rgba(255, 255, 255, 0.25)"
             >
-              <h1 className="text-xl font-bold">The LLM Playground</h1>
+              <h1 className="text-xl font-bold">Langvault:</h1>
               <ul className="">
                 <li>
-                  LLM playground is a simulation of all the AI models currently
-                  trending in the world . where you can compare two AI models by
-                  giving them coding questions or any expert question and let
-                  the LLM show how capable it is.
+                  Transform your PDFs and resumes effortlessly between national
+                  and international languages with just two clicks! OpenRAG's
+                  LangVault ensures your documents are instantly accessible in
+                  your preferred local language, breaking language barriers in
+                  seconds. Whether you're preparing for a global opportunity or
+                  simplifying communication, LangVault's lightning-fast,
+                  accurate translations make your documents ready to read,
+                  share, and impress—anywhere, anytime.
                 </li>
               </ul>
               <Link

@@ -7,9 +7,9 @@ import { Bounce } from 'react-toastify';
 
 const GetinTouch = () => {
   
-  // const backendBaseUrl = 'https://open-rag-mu.vercel.app/';
-  const backendBaseUrl = 'https://open-rag.onrender.com/';
-  // const backendBaseUrl = 'http://localhost:8081';
+  // server url
+  const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
+
   const containerRef = useRef(null);
   const [name,setName] = useState('');
   const [email, setEmail] = useState('');
@@ -47,7 +47,7 @@ const GetinTouch = () => {
     }
     // Send form data to your server here
     axios.defaults.withCredentials = false;
-    axios.post(`${backendBaseUrl}create`, values)
+    axios.post(`${backendBaseUrl}/create`, values)
      .then((response) => {
         
         setName('');

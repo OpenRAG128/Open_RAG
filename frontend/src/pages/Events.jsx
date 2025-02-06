@@ -84,7 +84,7 @@ const Events = () => {
                 GenAl Expert Sessions: Participants gained insights from
                 <span className="founderName text-emerald-300 cursor-pointer px-2  font-bold">
                   Mr. Subham Ojha{" "}
-                  <div className="founderImg w-40 h-40 top-[-20%] left-56 xl:left-[50%] xl:top-[-80%] xl:w-60 xl:h-80  border-2 xl:border-4 border-white rounded-xl">
+                  <div className="founderImg w-40 h-40 top-[-20%] left-32 xl:left-[50%] xl:top-[-80%] xl:w-60 xl:h-80  border-2 xl:border-4 border-white rounded-xl">
                     <img
                       src={founder1}
                       alt=""

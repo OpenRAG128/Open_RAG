@@ -5,6 +5,7 @@ import SpotlightCard from "../components/reactBits/SpotlightCard";
 import { Link } from "react-router-dom";
 import founder from "../assets/images/image1.png";
 import cofounder from "../assets/images/image2.jpg";
+import advisor from "../assets/images/advisor.jpg";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -59,27 +60,54 @@ const About = () => {
                 democratize AI and make it accessible worldwide.{" "}
               </p>
             </p>
-            <div className="hidden md:items-center  md:flex">
+            <div className="pt-5  md:items-center  flex overflow-y-auto">
               <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className=" w-60 h-80 border-4 border-white rounded-xl">
+                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
-                    src={cofounder}
+                    src={advisor}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
                 </div>
-                <h1 className="text-sm font-sans">CO-FOUNDER : <span className="text-emerald-300 font-bold">Mitul Goswami</span></h1>
+                <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
+                  ADVISOR : <br className="hidden md:block"/>
+                  <span className="text-emerald-300 font-bold">
+                    {" "}
+                    Suresh Chandra Satpathy
+                  </span>
+                </h1>
               </div>
 
               <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className=" w-60 h-80 border-4 border-white rounded-xl">
+                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
                     src={founder}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
                 </div>
-                <h1 className="text-sm font-sans">FOUNDER : <span className="text-emerald-300 font-bold"> Nisharg Nargund</span></h1>
+                <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
+                  FOUNDER : <br className="hidden md:block"/>
+                  <span className="text-emerald-300 font-bold">
+                    {" "}
+                    Nisharg Nargund
+                  </span>
+                </h1>
+              </div>
+              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
+                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
+                  <img
+                    src={cofounder}
+                    alt=""
+                    className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
+                  />
+                </div>
+                <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
+                  CO-FOUNDER : <br className="hidden md:block"/>
+                  <span className="text-emerald-300 font-bold">
+                    Mitul Goswami
+                  </span>
+                </h1>
               </div>
             </div>
           </SpotlightCard>
@@ -104,8 +132,36 @@ const About = () => {
               </p>
             </p>
           </SpotlightCard>
+          {/* <SpotlightCard>
+            <div class="main-container">
+              <div class="sub-container">
+                <div class="details">
+                  <div class="image-conatiner">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1738614647383-0435fcb26a55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </div>
+                  <div class="details-text">
+                    <p>Product Title</p>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="image-conatiner">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1738614647383-0435fcb26a55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </div>
+                  <div class="details-text">
+                    <p>Product Title</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SpotlightCard> */}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

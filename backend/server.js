@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js";
 import userModel from "./models/userModel.js";
 import "dotenv/config";
 import nodemailer from "nodemailer";
+import { Parser } from "json2csv";
 
 const app = express();
 // Enable CORS
@@ -18,17 +19,25 @@ app.use(express.urlencoded({ extended: true }));
 // db connection
 connectDB();
 
-const DMY = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const Time = new Date().toLocaleTimeString("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  hour12: true,
-}); // 12-hour format
-const Day = new Date().toLocaleDateString("en-US", { weekday: "long" }); // Day name
-const timing = `${DMY} ${Time} ${Day}`; // Concatenate with spaces for clarity
-const date = new Date();
+const now = new Date();
 
-// routes
+// Convert to IST (Indian Standard Time)
+const options = { timeZone: "Asia/Kolkata", hour12: true, hour: "2-digit", minute: "2-digit" };
+const HrMin = now.toLocaleTimeString("en-US", options); // e.g., "02:30 PM"
+
+// Get date in YYYY-MM-DD format
+const DMY = now.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }); // "YYYY-MM-DD"
+
+// Get day name
+const Day = now.toLocaleDateString("en-US", { timeZone: "Asia/Kolkata", weekday: "long" });
+
+// Final formatted timing
+const timing = `${DMY} ${HrMin} ${Day}`;
+
+console.log(timing); 
+
+
+// // routes
 app.post("/create", async (req, res) => {
   // , number, reached, description
   const { name, email, selectedOption, description } = req.body;
@@ -40,7 +49,7 @@ app.post("/create", async (req, res) => {
     timing: timing,
   };
   const createdUser = await userModel.create(newUser);
-  console.log(createdUser);
+
   res.json({ msg: "got it", data: createdUser });
 
   //Mail Service added
@@ -81,6 +90,23 @@ app.post("/create", async (req, res) => {
     }
   });
 });
+
+app.get("/export", async (req, res) => {
+  const users = await userModel.find().lean(); 
+  console.log(users);
+  const fields = ["name", "email", "reached", "description", "timing"];
+  const json2csvParser = new Parser({ fields });
+  const csv = json2csvParser.parse(users);
+  res.setHeader('Content-disposition', 'attachment; filename=users.csv');
+  res.set('Content-Type', 'text/csv');
+  res.status(200).send(csv);
+});
+
+app.get('/exports/users',(req,res)=>{
+  const users =  userModel.find();
+  console.log(users.length);
+  res.json({'TotalUsers':users.length });
+})
 
 app.get("/", (req, res) => {
   res.send("Hey , This is backend");
