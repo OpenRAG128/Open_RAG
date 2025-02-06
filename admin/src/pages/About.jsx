@@ -10,7 +10,7 @@ dotenv.config();
 const About = () => {
   const containerRef = useRef(null);
   const [users, setUsers] = useState(null);
-  const backendBaseUrl = process.env.VITE_REACT_APP_BACKEND_BASEURL;
+  const backendBaseUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
   // const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
   // const backendBaseUrl = "http://localhost:8081";
   useEffect(()=>{
