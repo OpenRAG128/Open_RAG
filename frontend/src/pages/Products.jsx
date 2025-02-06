@@ -47,7 +47,7 @@ const Products = () => {
             </p>
             {/* sm screen view (mobile view)*/}
             <SpotlightCard
-              className="md:hidden w-[90vw] h-96 flex flex-col gap-5 cursor-pointer rounded-md"
+              className="md:hidden w-[90vw] h-max flex flex-col gap-5 cursor-pointer rounded-md"
               spotlightColor="rgba(255, 255, 255, 0.25)"
             >
               <h1 className="text-xl font-bold">Langvault:</h1>
