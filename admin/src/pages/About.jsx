@@ -4,10 +4,14 @@ import "../styles/style.css";
 import axios from "axios";
 import VariableProximity from "../components/reactBits/VariableProximity";
 import { useEffect } from "react";
+import dotenv from 'dotenv';
+dotenv.config();
+
 const About = () => {
   const containerRef = useRef(null);
   const [users, setUsers] = useState(null);
-  const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
+  const backendBaseUrl = process.env.VITE_REACT_APP_BACKEND_BASEURL;
+  // const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
   // const backendBaseUrl = "http://localhost:8081";
   useEffect(()=>{
     axios.get(`${backendBaseUrl}/totalUsers`)
