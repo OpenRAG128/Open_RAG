@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js";
 import userModel from "./models/userModel.js";
 import "dotenv/config";
 import nodemailer from "nodemailer";
+import { Parser } from "json2csv";
 
 const app = express();
 // Enable CORS
@@ -33,7 +34,7 @@ const Day = now.toLocaleDateString("en-US", { timeZone: "Asia/Kolkata", weekday:
 // Final formatted timing
 const timing = `${DMY} ${HrMin} ${Day}`;
 
-console.log(timing); // Example Output: "2024-02-05 02:30 PM Monday"
+console.log(timing); 
 
 
 // // routes
@@ -89,6 +90,18 @@ app.post("/create", async (req, res) => {
     }
   });
 });
+// endpoint to download csv file 
+app.get("/export", async (req, res) => {
+  const users = await userModel.find().lean(); 
+  console.log(users);
+  const fields = ["name", "email", "reached", "description", "timing"];
+  const json2csvParser = new Parser({ fields });
+  const csv = json2csvParser.parse(users);
+  res.setHeader('Content-disposition', 'attachment; filename=users.csv');
+  res.set('Content-Type', 'text/csv');
+  res.status(200).send(csv);
+});
+
 
 app.get("/", (req, res) => {
   res.send("Hey , This is backend");
