@@ -8,7 +8,7 @@ import { Bounce } from 'react-toastify';
 const GetinTouch = () => {
   
   // server url
-  const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
+  const backendBaseUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
 
   const containerRef = useRef(null);
   const [name,setName] = useState('');
