@@ -27,6 +27,4 @@ Frontend: React, Tailwind CSS, JavaScript
 
 Backend: Node.js, Express.js, MongoDB
 
-AI Tools: Custom AI models for Docdaynamo and LanVault
-
 Deployment: Vercel, Render
