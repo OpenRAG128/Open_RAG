@@ -90,6 +90,18 @@ app.post("/create", async (req, res) => {
     }
   });
 });
+// endpoint to download csv file 
+app.get("/export", async (req, res) => {
+  const users = await userModel.find().lean(); 
+  console.log(users);
+  const fields = ["name", "email", "reached", "description", "timing"];
+  const json2csvParser = new Parser({ fields });
+  const csv = json2csvParser.parse(users);
+  res.setHeader('Content-disposition', 'attachment; filename=users.csv');
+  res.set('Content-Type', 'text/csv');
+  res.status(200).send(csv);
+});
+
 
 app.get("/export", async (req, res) => {
   const users = await userModel.find().lean(); 
