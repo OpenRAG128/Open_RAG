@@ -10,9 +10,9 @@ const About = () => {
   const backendBaseUrl = 'https://open-rag-c32i.onrender.com';
   // const backendBaseUrl = "http://localhost:8081";
   useEffect(()=>{
-    axios.get(`${backendBaseUrl}/exports/users`)
+    axios.get(`${backendBaseUrl}/totalUsers`)
      .then((response) => {
-        setUsers(response.data.TotalUsers);
+        setUsers(response.data.data);
       })
       .catch((error) => {
         console.error(error);

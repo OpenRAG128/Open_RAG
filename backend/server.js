@@ -103,12 +103,17 @@ app.get("/export", async (req, res) => {
 });
 
 
+app.get('/totalUsers', async (req, res) => {
+  try {
+    const users = await userModel.find().lean();  // Wait for the result of the database query
+    console.log(users);
+    res.status(200).json({ data:users.length });
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Error fetching users' });
+  }
+});
 
-app.get('/exports/users',(req,res)=>{
-  const users =  userModel.find();
-  console.log(users.length);
-  res.json({'TotalUsers':users.length });
-})
 
 app.get("/", (req, res) => {
   res.send("Hey , This is backend");
