@@ -22,7 +22,7 @@ We have created **Docdaynamo** and **LanVault** — AI-based products designed t
 
 **Admin Panel:** https://open-rag-admin.vercel.app/
 
-# 🖥 Technology Stack:
+# 🖥 Technology Stack
 Frontend: React, Tailwind CSS, JavaScript  
 
 Backend: Node.js, Express.js, MongoDB
