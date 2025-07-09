@@ -36,16 +36,18 @@ const About = () => {
             <h1 className="text-emerald-300 font-bold">How It Started</h1>
             <p className="flex flex-col gap-2">
               <p className="font-sans">
-                OpenRAG, or Open Source Rapid Algorithms of Growth, is a
-                Generative AI startup co-founded by{" "}
+                OpenRAG , is a Generative AI startup founded in April 2024 by{" "}
+                <span className="text-emerald-300  font-bold px-2">
+                  Suresh Chandra Satapathy ,
+                </span>{" "}
                 <span className="text-emerald-300  font-bold px-2">
                   Nisharg Nargund
                 </span>{" "}
                 and{" "}
                 <span className="text-emerald-300  font-bold px-2">
-                  Mitul Goswami
+                  Mitul Goswami.
                 </span>{" "}
-                in April 2024.
+                
               </p>
               <p className="font-sans">
                 Focused on developing domain-specific RAGbots, generative AI
@@ -58,7 +60,7 @@ const About = () => {
                 democratize AI and make it accessible worldwide.{" "}
               </p>
             </p>
-            <div className="pt-5    flex overflow-y-auto flex-col gap-2 items-start ">
+            <div className="pt-5  flex overflow-y-auto flex-col gap-2 items-start ">
               <h1 className="font-medium text-sm md:text-xl lg:text-xl">People Who Make It Happen : </h1>
               <div className=" m-auto text-black font-bold text-lg   w-full flex flex-col gap-2 ">
                 {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
