@@ -1,11 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import VariableProximity from "../components/reactBits/VariableProximity";
-import BlogCard from "../components/BlogCard";
 import SpotlightCard from "../components/reactBits/SpotlightCard";
-import { Link } from "react-router-dom";
-import founder from "../assets/images/image1.png";
-import cofounder from "../assets/images/image2.jpg";
-import advisor from "../assets/images/advisor.jpg";
+// import founder from "../assets/images/image1.png";
+// import cofounder from "../assets/images/image2.jpg";
+// import advisor from "../assets/images/advisor.jpg";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -60,17 +58,18 @@ const About = () => {
                 democratize AI and make it accessible worldwide.{" "}
               </p>
             </p>
-            <div className="pt-5  md:items-center  flex overflow-y-auto">
-              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
+            <div className="pt-5    flex overflow-y-auto flex-col gap-2 items-start ">
+              <h1 className="font-medium text-sm md:text-xl lg:text-xl">People Who Make It Happen : </h1>
+              <div className=" m-auto text-black font-bold text-lg   w-full flex flex-col gap-2 ">
+                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
                     src={advisor}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
-                </div>
+                </div> */}
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  ADVISOR : <br className="hidden md:block"/>
+                  {/* ADVISOR : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
                     {" "}
                     Suresh Chandra Satpathy
@@ -78,32 +77,32 @@ const About = () => {
                 </h1>
               </div>
 
-              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
+              <div className=" m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
+                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
                     src={founder}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
-                </div>
+                </div> */}
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  FOUNDER : <br className="hidden md:block"/>
+                  {/* FOUNDER : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
                     {" "}
                     Nisharg Nargund
                   </span>
                 </h1>
               </div>
-              <div className=" m-auto text-black font-bold text-lg px-2 w-max flex flex-col gap-2">
-                <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
+              <div className=" m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
+                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
                   <img
                     src={cofounder}
                     alt=""
                     className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
                   />
-                </div>
+                </div> */}
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  CO-FOUNDER : <br className="hidden md:block"/>
+                  {/* CO-FOUNDER : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
                     Mitul Goswami
                   </span>
