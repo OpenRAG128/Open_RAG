@@ -47,8 +47,8 @@ const About = () => {
 
               <p className="font-sans">
                 The founders aim to position OpenRAG as a global leader in
-                RAGbot and generative AI agent development, with a mission to
-                democratize AI and make it accessible worldwide.
+                 and generative AI agent development, with a mission committed to building AI solutions that are trustworthy, 
+                scalable, and transformative for the future of knowledge systems.
               </p>
 
               {/* Incorporation Details */}
