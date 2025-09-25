@@ -28,83 +28,84 @@ const About = () => {
             falloff="linear"
           />
         </div>
-        <div className=" w-max h-max flex flex-col items-center gap-5 md:w-full md:flex-col md:flex md:items-start md:gap-5 md:flex-wrap">
+
+        <div className="w-max h-max flex flex-col items-center gap-5 md:w-full md:flex-col md:flex md:items-start md:gap-5 md:flex-wrap">
           <SpotlightCard
-            className="w-[90vw] md:w-[80vw] md:h-max cursor-pointer rounded-md flex flex-col gap-2 "
+            className="w-[90vw] md:w-[80vw] md:h-max cursor-pointer rounded-md flex flex-col gap-2"
             spotlightColor="rgba(255, 255, 255, 0.25)"
           >
             <h1 className="text-emerald-300 font-bold">How It Started</h1>
-            <p className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               <p className="font-sans">
-                OpenRAG , is a Generative AI startup founded in April 2024 by{" "}
-                <span className="text-emerald-300  font-bold px-2">
-                  Suresh Chandra Satapathy ,
-                </span>{" "}
-                <span className="text-emerald-300  font-bold px-2">
-                  Nisharg Nargund
-                </span>{" "}
-                and{" "}
-                <span className="text-emerald-300  font-bold px-2">
-                  Mitul Goswami.
-                </span>{" "}
-                
+                OpenRAG Innovations Pvt. Ltd. is a technology company dedicated
+                to engineering precision in Generative AI through our proprietary
+                Corrective Context Engine (CCE). We focus on building intelligent
+                systems that eliminate hallucinations, deliver role-specific
+                insights, and ensure efficiency across academia, research, and
+                enterprise knowledge work.
               </p>
-              <p className="font-sans">
-                Focused on developing domain-specific RAGbots, generative AI
-                tools, agents, and applications, OpenRAG is establishing itself
-                as a key player in the chatbot-building industry.{" "}
-              </p>
+
               <p className="font-sans">
                 The founders aim to position OpenRAG as a global leader in
                 RAGbot and generative AI agent development, with a mission to
-                democratize AI and make it accessible worldwide.{" "}
+                democratize AI and make it accessible worldwide.
               </p>
-            </p>
-            <div className="pt-5  flex overflow-y-auto flex-col gap-2 items-start ">
-              <h1 className="font-medium text-sm md:text-xl lg:text-xl">People Who Make It Happen : </h1>
-              <div className=" m-auto text-black font-bold text-lg   w-full flex flex-col gap-2 ">
-                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
-                  <img
-                    src={advisor}
-                    alt=""
-                    className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
-                  />
-                </div> */}
+
+              {/* Incorporation Details */}
+              <div className="mt-6 rounded-lg border border-gray-700 bg-gray-900 p-5">
+                <h3 className="text-emerald-300 font-semibold mb-3">
+                  Incorporation Details
+                </h3>
+                <ul className="list-none space-y-2 text-sm text-gray-200">
+                  <li>
+                    <span className="font-semibold">Registered Name:</span>{" "}
+                    OpenRAG Innovations Private Limited
+                  </li>
+                  <li>
+                    <span className="font-semibold">Corporate Identity Number (CIN):</span>{" "}
+                    U58201OD2025PTC050816
+                  </li>
+                  <li>
+                    <span className="font-semibold">Date of Incorporation:</span>{" "}
+                    22nd September 2025
+                  </li>
+                  <li>
+                    <span className="font-semibold">Registered Office:</span>{" "}
+                    Plot No. 97/F, Near PH7, S.S. Vihar, KIIT, Bhubaneswar –
+                    751024, Odisha, India
+                  </li>
+                </ul>
+                <p className="mt-4 text-xs text-gray-500">
+                  As per the Certificate of Incorporation issued by the Ministry
+                  of Corporate Affairs, Government of India.
+                </p>
+              </div>
+            </div>
+
+            {/* People Section */}
+            <div className="pt-5 flex overflow-y-auto flex-col gap-2 items-start">
+              <h1 className="font-medium text-sm md:text-xl lg:text-xl">
+                People Who Make It Happen:
+              </h1>
+
+              <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  {/* ADVISOR : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
-                    {" "}
-                    Suresh Chandra Satpathy
+                    Suresh Chandra Satapathy
                   </span>
                 </h1>
               </div>
 
-              <div className=" m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
-                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
-                  <img
-                    src={founder}
-                    alt=""
-                    className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
-                  />
-                </div> */}
+              <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  {/* FOUNDER : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
-                    {" "}
                     Nisharg Nargund
                   </span>
                 </h1>
               </div>
-              <div className=" m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
-                {/* <div className="w-52 h-56 md:w-40 md:h-44 lg:w-52 lg:h-56 xl:w-60 xl:h-80 border-4 border-white rounded-xl">
-                  <img
-                    src={cofounder}
-                    alt=""
-                    className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0"
-                  />
-                </div> */}
+
+              <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
-                  {/* CO-FOUNDER : <br className="hidden md:block"/> */}
                   <span className="text-emerald-300 font-bold">
                     Mitul Goswami
                   </span>
@@ -112,28 +113,29 @@ const About = () => {
               </div>
             </div>
           </SpotlightCard>
+
           <SpotlightCard
             className="w-[90vw] md:w-[80vw] md:h-max cursor-pointer rounded-md flex flex-col gap-2"
             spotlightColor="rgba(255, 255, 255, 0.25)"
           >
-            <h1 className="text-emerald-300 font-bold">What we Provide</h1>
-            <p className="flex flex-col gap-2 ">
+            <h1 className="text-emerald-300 font-bold">What We Provide</h1>
+            <div className="flex flex-col gap-2">
               <p className="font-sans">
-                Generative AI applications are often generic, money & resource
-                intensive, and poorly aligned with the specific needs of various
-                industries, not really niche domain experts.{" "}
+                Generative AI applications are often generic, resource-intensive,
+                and poorly aligned with the specific needs of various industries,
+                making them ineffective as true domain experts.
               </p>
               <p className="font-sans">
-                OpenRAG addresses these challenges by developing RAGbots—{" "}
+                OpenRAG addresses these challenges by developing{" "}
                 <span className="text-emerald-300 font-bold px-2">
-                  industry-specific
+                  context-aware and a multi-layer hallucination removal
                 </span>{" "}
-                Retrieval-Augmented Generation chatbots—and generative AI agents
-                and tools.
+                Contextual Corrective Engine (CCE), generative AI
+                agents, and tools that bring precision and reliability to
+                high-stakes domains.
               </p>
-            </p>
+            </div>
           </SpotlightCard>
-
         </div>
         <Footer />
       </div>
