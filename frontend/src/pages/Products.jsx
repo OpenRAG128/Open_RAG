@@ -51,7 +51,7 @@ const Products = () => {
                 </li>
               </ul>
               <Link
-                to="https://docdynamo.in/"
+                to="https://play.google.com/store/apps/details?id=com.openrag.docdynamo"
                 target="_blank"
                 className="buttonFade bg-white px-4 py-2 rounded-md text-[#10a37f] font-bold text-md w-max h-max z-20 "
               >
