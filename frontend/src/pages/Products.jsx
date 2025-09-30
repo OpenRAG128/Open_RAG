@@ -47,12 +47,7 @@ const Products = () => {
               <h1 className="text-xl font-bold">DocDynamo</h1>
               <ul className="">
                 <li>
-                  OpenRAG offers tailored AI applications and DOCDYNAMO is one
-                  of it which offers you time and space where you can just
-                  upload your multiple PDFs(Upto 5) for free and ask the
-                  questions to our chatbot and it will respond you as early as
-                  possible. Also, get a personalised youtube recommendations
-                  according to the query you asked.
+                  DocDynamo (Android application), transforms static files and websites into interactive knowledge systems. Users can upload PDFs, research papers, or URLs and query them with minimal prompting, eliminating the complexity that keeps most non-technical users away from AI. What makes DocDynamo unique is its persona-driven responses, a student gets simplified explanations, a researcher gets depth, and a professional gets concise summaries, all from the same system. Beyond Q&A, we offer a one-click generation suite that creates key questions, concept notes, turning passive reading into active learning. To extend value further, our platform includes YouTube intelligence, recommending videos directly relevant to user queries. Together, these features make DocDynamo more than a chatbot — it's a dynamic learning and knowledge companion.
                 </li>
               </ul>
               <Link
