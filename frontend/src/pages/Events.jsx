@@ -17,13 +17,15 @@ const Events = () => {
   };
   const ref = useRef(null);
   useEffect(() => {
-    const rect = ref.current.getBoundingClientRect();
-    setBottomPosition(Math.floor(rect.bottom - 20));
-    console.log(BottomPosition);
-    console.log(selectedId);
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      setBottomPosition(Math.floor(rect.bottom - 20));
+      console.log(BottomPosition);
+      console.log(selectedId);
+    }
   }, [selectedId]);
   return (
-    <div className="w-full h-[300vh] md:h-[200vh] bg-black pt-36">
+    <div className="w-full h-[500vh] md:h-[300vh] bg-black pt-36">
       <div className="w-[90%] h-full pl-2 pr-2 bg-black m-auto flex flex-col gap-2">
         {/* heading */}
         <div
@@ -45,7 +47,6 @@ const Events = () => {
         </div>
         {/* 1 */}
         <div
-        
           className={`cursor-pointer w-full h-[7rem] md:h-24 ease-linear  flex flex-col items-center gap-2 relative  overflow-${
             selectedId === 1 ? "auto" : "hidden"
           } px-4`}
@@ -55,7 +56,16 @@ const Events = () => {
             className=" absolute z-10 w-full  top-0 bg-black flex items-center justify-between"
           >
             <h1 className="text-lg  md:text-2xl lg:text-4xl text-white">
-            1. AI FOR INDIA OpenRAG X <Link to='https://www.instagram.com/axamine.ai?igsh=eWRtZzJhZmg1cnE2' target="_blank" className="cursor-pointer text-emerald-300"> Axamine</Link>: A pan India generativeAI Hackathon{" "}
+              1. AI FOR INDIA OpenRAG X{" "}
+              <Link
+                to="https://www.instagram.com/axamine.ai?igsh=eWRtZzJhZmg1cnE2"
+                target="_blank"
+                className="cursor-pointer text-emerald-300"
+              >
+                {" "}
+                Axamine
+              </Link>
+              : A pan India generativeAI Hackathon{" "}
             </h1>
             <div
               style={{ rotate: selectedId === 1 ? "45deg" : "0deg" }}
@@ -69,7 +79,7 @@ const Events = () => {
             </div>
           </div>
           <div
-            ref={ref}
+            ref={selectedId === 1 ? ref : null} // Conditionally assign ref
             style={{
               top: selectedId === 1 ? "100px" : "0px",
               opacity: selectedId === 1 ? "100" : "0",
@@ -144,7 +154,9 @@ const Events = () => {
             onClick={() => handleToggle(2)}
             className="z-20 absolute w-full top-0 bg-black flex items-center justify-between"
           >
-            <h1 className="text-lg text-white md:text-2xl lg:text-4xl">2. Intellectra </h1>
+            <h1 className="text-lg text-white md:text-2xl lg:text-4xl">
+              2. Intellectra{" "}
+            </h1>
             <div
               style={{ rotate: selectedId === 2 ? "45deg" : "0deg" }}
               className="transition-all duration-500 ease-linear "
@@ -157,8 +169,12 @@ const Events = () => {
             </div>
           </div>
           <div
-            style={{ top: selectedId === 2 ? "80px" : "10px",opacity:selectedId === 2 ? "100" : "0" }}
-            className='w-full absolute transition-all duration-700  ease-linear  text-white '
+            ref={selectedId === 2 ? ref : null} // Conditionally assign ref
+            style={{
+              top: selectedId === 2 ? "80px" : "10px",
+              opacity: selectedId === 2 ? "100" : "0",
+            }}
+            className="w-full absolute transition-all duration-700  ease-linear  text-white "
           >
             <p className="text-xl text-gray-100 ">
               {/* Events Date: 3rd July 2024 - 7th July 2024 */}
@@ -238,8 +254,12 @@ const Events = () => {
             </div>
           </div>
           <div
-            style={{ top: selectedId === 3 ? "80px" : "10px",opacity:selectedId === 3? 100 : 0 }}
-            className=' w-full absolute transition-all duration-700  ease-linear text-white '
+            ref={selectedId === 3 ? ref : null} // Conditionally assign ref
+            style={{
+              top: selectedId === 3 ? "80px" : "10px",
+              opacity: selectedId === 3 ? 100 : 0,
+            }}
+            className=" w-full absolute transition-all duration-700  ease-linear text-white "
           >
             <p className="text-xl text-gray-100 ">
               {/* Events Date: 3rd July 2024 - 7th July 2024 */}
@@ -249,6 +269,163 @@ const Events = () => {
                 GenAl Expert Sessions: Participants gained insights from Mr.
                 Subham Ojha, Founder of CX Guru and a renowned GenAl Expert,
                 during our featured speaker session on Generative Al.
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* 4 */}
+        <div
+          style={{
+            top:
+              selectedId === null || selectedId === 4
+                ? "0px"
+                : BottomPosition + "px",
+          }}
+          className={`cursor-pointer w-full h-[68px] md:h-20 ease-linear flex flex-col items-center gap-2 relative transition-all duration-700 overflow-${
+            selectedId === 4 ? "auto" : "hidden"
+          } px-4`}
+        >
+          <div
+            onClick={() => handleToggle(4)}
+            className="z-20 absolute w-full top-0 bg-black flex items-center justify-between"
+          >
+            <h1 className="text-lg text-white md:text-2xl lg:text-4xl">
+              4. Official AI Partner for{" "}
+              <Link
+                to="https://www.icdect.com/"
+                target="_blank"
+                className="cursor-pointer text-emerald-300"
+              >
+                ICDECT-2025 Research Conference
+              </Link>
+            </h1>
+            <div
+              style={{ rotate: selectedId === 4 ? "45deg" : "0deg" }}
+              className="transition-all duration-500 ease-linear "
+            >
+              {selectedId === 4 ? (
+                <IoMdAdd className="text-white text-2xl md:text-4xl" />
+              ) : (
+                <IoMdAdd className="text-white text-2xl md:text-4xl" />
+              )}
+            </div>
+          </div>
+          <div
+            ref={selectedId === 4 ? ref : null} // Conditionally assign ref
+            style={{
+              top: selectedId === 4 ? "80px" : "10px",
+              opacity: selectedId === 4 ? 100 : 0,
+            }}
+            className="w-full absolute transition-all duration-700 ease-linear text-white"
+          >
+            <p className="text-xl text-gray-100">
+              Event Date: December 1st - 2nd, 2025
+            </p>
+            <ul className="list-disc flex flex-col gap-2 mt-2">
+              <li>
+                OpenRAG is the official AI Partner for the 6th International
+                Conference on Data Engineering and Communication Technology
+                (ICDECT-2025), a Scopus-indexed event held at{" "}
+                <span className="text-emerald-300 font-bold">
+                  Bhubaneswar Engineering College
+                </span>
+                .
+              </li>
+              <li>
+                The conference theme is{" "}
+                <span className="text-emerald-300 font-bold">
+                  “Innovation Paradigms: Knowledge, Intelligence, and
+                  Sustainability...”
+                </span>
+                , attracting researchers and scientists globally.
+              </li>
+              <li>
+                All accepted papers will be published by{" "}
+                <span className="text-emerald-300 font-bold">
+                  Springer Nature
+                </span>
+                , a leading academic publisher.
+              </li>
+              <li>
+                This partnership highlights OpenRAG's commitment to fostering
+                advanced, multi-disciplinary research in computing and AI.
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* 5 */}
+        <div
+          style={{
+            top:
+              selectedId === null || selectedId === 5
+                ? "0px"
+                : BottomPosition + "px",
+          }}
+          className={`cursor-pointer w-full h-[68px] md:h-20 ease-linear flex flex-col items-center gap-2 relative transition-all duration-700 overflow-${
+            selectedId === 5 ? "auto" : "hidden"
+          } px-4`}
+        >
+          <div
+            onClick={() => handleToggle(5)}
+            className="z-20 absolute w-full top-0 bg-black flex items-center justify-between"
+          >
+            <h1 className="text-lg text-white md:text-2xl lg:text-4xl">
+              5. Official AI Partner for{" "}
+              <Link
+                to="https://icmeet.co.uk/"
+                target="_blank"
+                className="cursor-pointer text-emerald-300"
+              >
+                ICMEET-2025 Research Conference
+              </Link>
+            </h1>
+            <div
+              style={{ rotate: selectedId === 5 ? "45deg" : "0deg" }}
+              className="transition-all duration-500 ease-linear "
+            >
+              {selectedId === 5 ? (
+                <IoMdAdd className="text-white text-2xl md:text-4xl" />
+              ) : (
+                <IoMdAdd className="text-white text-2xl md:text-4xl" />
+              )}
+            </div>
+          </div>
+          <div
+            ref={selectedId === 5 ? ref : null} // Conditionally assign ref
+            style={{
+              top: selectedId === 5 ? "80px" : "10px",
+              opacity: selectedId === 5 ? 100 : 0,
+            }}
+            className="w-full absolute transition-all duration-700 ease-linear text-white"
+          >
+            <p className="text-xl text-gray-100">
+              Event Date: October 30th - 31st, 2025
+            </p>
+            <ul className="list-disc flex flex-col gap-2 mt-2">
+              <li>
+                As the official AI Partner, OpenRAG supports the 10th
+                International Conference on Micro-Electronics, Electromagnetics
+                and Telecommunications (ICMEET-2025).
+              </li>
+              <li>
+                This is the Decennial Edition of the conference, held in{" "}
+                <span className="text-emerald-300 font-bold">
+                  London, UK
+                </span>{" "}
+                in association with{" "}
+                <span className="text-emerald-300 font-bold">
+                  University College Cork, Ireland
+                </span>
+                .
+              </li>
+              <li>
+                The event brings together global academic scientists and
+                researchers to discuss recent developments and future trends in
+                the field.
+              </li>
+              <li>
+                This partnership reinforces OpenRAG's role in advancing AI
+                within the core domains of electronics and telecommunications.
               </li>
             </ul>
           </div>
