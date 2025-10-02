@@ -325,7 +325,7 @@ const Events = () => {
               <li>
                 OpenRAG is the official AI Partner for the 6th International
                 Conference on Data Engineering and Communication Technology
-                (ICDECT-2025), a Scopus-indexed event held at{" "}
+                (ICDECT-2025), a Scopus-indexed event organized by{" "}
                 <span className="text-emerald-300 font-bold">
                   Bhubaneswar Engineering College
                 </span>
