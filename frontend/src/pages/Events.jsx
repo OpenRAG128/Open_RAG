@@ -155,7 +155,7 @@ const Events = () => {
             className="z-20 absolute w-full top-0 bg-black flex items-center justify-between"
           >
             <h1 className="text-lg text-white md:text-2xl lg:text-4xl">
-              2. Intellectra{" "}
+              2. Intellectra: GenAI for beginners{" "}
             </h1>
             <div
               style={{ rotate: selectedId === 2 ? "45deg" : "0deg" }}
