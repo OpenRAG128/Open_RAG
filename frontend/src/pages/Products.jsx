@@ -51,7 +51,7 @@ const Products = () => {
                 </li>
               </ul>
               <Link
-                to="https://play.google.com/store/apps/details?id=com.openrag.docdynamo"
+                to="https://www.docdynamo.in/"
                 target="_blank"
                 className="buttonFade bg-white px-4 py-2 rounded-md text-[#10a37f] font-bold text-md w-max h-max z-20 "
               >
@@ -62,7 +62,7 @@ const Products = () => {
           <div className="hidden md:flex w-10 h-full  pt-10 pb-10 relative  md:flex-col">
             <div className="line absolute left-[50%] w-1 h-16  bg-white m-auto transition-all duration-700 ease-linear"></div>
             <Link
-              to="https://play.google.com/store/apps/details?id=com.openrag.docdynamo"
+              to="https://www.docdynamo.in/"
               target="_blank"
               className="buttonFade absolute left-[-110%] top-[30%] bg-white px-2 py-2 rounded-md text-[#10a37f] font-bold text-xl w-max h-max z-20 "
             >
