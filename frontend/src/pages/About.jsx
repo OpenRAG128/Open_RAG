@@ -107,7 +107,7 @@ const About = () => {
               <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
                   <span className="text-emerald-300 font-bold">
-                    Mitul Goswami
+                    Miten Mehta
                   </span>
                 </h1>
               </div>
