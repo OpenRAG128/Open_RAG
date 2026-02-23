@@ -91,7 +91,7 @@ const About = () => {
               <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
                   <span className="text-emerald-300 font-bold">
-                    Suresh Chandra Satapathy
+                    Nisharg Bhargav Nargund
                   </span>
                 </h1>
               </div>
@@ -99,7 +99,7 @@ const About = () => {
               <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
                   <span className="text-emerald-300 font-bold">
-                    Nisharg Nargund
+                    Dr. Suresh Chandra Satapathy
                   </span>
                 </h1>
               </div>
@@ -107,7 +107,7 @@ const About = () => {
               <div className="m-auto text-black font-bold text-lg w-full flex flex-col gap-2">
                 <h1 className="text-[.69rem] lg:text-[.79rem] xl:text-sm font-sans">
                   <span className="text-emerald-300 font-bold">
-                    Miten Mehta
+                    Miten N Mehta
                   </span>
                 </h1>
               </div>
